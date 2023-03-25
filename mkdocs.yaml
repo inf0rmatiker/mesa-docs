@@ -1,0 +1,43 @@
+site_name: Example
+site_description: 'Documentation Site Template'
+site_author: 'Caleb Carlson'
+docs_dir: docs/
+repo_name: 'inf0rmatiker/mesa-docs'
+repo_url: 'https://github.com/inf0rmatiker/mesa-docs'
+theme:
+  name: 'material'
+  custom_dir: overrides
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - macros
+  - section-index
+extra:
+  version:
+    provider: mike
+    default: latest
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+nav:
+    # mkdocs transforms README.md files to index.html
+    # https://www.mkdocs.org/user-guide/writing-your-docs/#index-pages
+    - Overview: README.md
+    - 'Example Tab 1':
+      - 'Tab 1 Section 1' : example/example_1.md
+      - 'Tab 2 Section 2' : example/example_2.md
