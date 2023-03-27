@@ -8,7 +8,7 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 
 RUN mkdir /mkdocs
 WORKDIR /mkdocs
-COPY mkdocs.yml mkdocs_requirements.txt requirements.txt ./
+COPY mkdocs.yaml mkdocs_requirements.txt requirements.txt ./
 RUN pip3 install -r mkdocs_requirements.txt
 
 ENTRYPOINT ["mkdocs", "serve", "--dev-addr", "0.0.0.0:8000"]
